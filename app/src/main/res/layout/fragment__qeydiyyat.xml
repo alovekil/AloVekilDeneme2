@@ -5,6 +5,7 @@
     <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+        tools:layout="@layout/fragment__qeydiyyat"
     tools:context=".Fragment_Qeydiyyat">
 
         <Button
@@ -17,8 +18,8 @@
             android:layout_marginTop="200dp"
             android:gravity="center"
             android:scaleType="fitCenter"
-            android:text="Vəkil Qeydiyyat"
-            android:textSize="18dp" />
+            android:text="@string/VekilLogin"
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/customerregistr"
@@ -29,8 +30,8 @@
             android:layout_marginTop="30dp"
             android:gravity="center"
             android:padding="5dp"
-            android:text="Müştəri Qeydiyyat"
-            android:textSize="18dp" />
+            android:text="@string/MusteriLogin"
+            android:textSize="18sp" />
 
 </RelativeLayout>
     </layout>

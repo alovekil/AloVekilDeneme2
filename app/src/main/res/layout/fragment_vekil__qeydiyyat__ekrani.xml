@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.Vekil_Qeydiyyat_Ekrani">
+
+
+    <EditText
+        android:id="@+id/Number"
+        android:layout_width="236dp"
+        android:layout_height="63dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="243dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="425dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/number"
+        android:visibility="visible"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="167dp"
+        android:layout_height="74dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="135dp"
+        android:layout_marginTop="343dp"
+        android:layout_marginEnd="109dp"
+        android:layout_marginBottom="313dp"
+        android:text="@string/SMS" />
+
+</RelativeLayout>

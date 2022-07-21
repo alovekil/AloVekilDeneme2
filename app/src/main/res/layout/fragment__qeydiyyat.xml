@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment_Qeydiyyat">
+
+        <Button
+            android:id="@+id/lawyerregistr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="109dp"
+            android:layout_marginTop="200dp"
+            android:gravity="center"
+            android:scaleType="fitCenter"
+            android:text="Vəkil Qeydiyyat"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/customerregistr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lawyerregistr"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Müştəri Qeydiyyat"
+            android:textSize="18dp" />
+
+</RelativeLayout>
+    </layout>

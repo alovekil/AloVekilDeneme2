@@ -3,47 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/qeydiyyat_navigation_proces"
-    app:startDestination="@id/fragment_Qeydiyyat3">
-
+    app:startDestination="@id/fragment_Qeydiyyat_Ekrani">
+    <fragment
+        android:id="@+id/fragment_Qeydiyyat_Ekrani"
+        android:name="com.example.testalovekil2.View.Fragment_Qeydiyyat_Ekrani"
+        android:label="fragment__qeydiyyat__ekrani"
+        tools:layout="@layout/fragment__qeydiyyat__ekrani" >
+        <action
+            android:id="@+id/action_fragment_Qeydiyyat_Ekrani_to_fragment_Vekil_Qeydiyyat"
+            app:destination="@id/fragment_Vekil_Qeydiyyat" />
+        <action
+            android:id="@+id/action_fragment_Qeydiyyat_Ekrani_to_fragment_Musteri_Qeydiyyat"
+            app:destination="@id/fragment_Musteri_Qeydiyyat" />
+    </fragment>
     <fragment
         android:id="@+id/fragment_Vekil_Qeydiyyat"
         android:name="com.example.testalovekil2.View.Fragment_Vekil_Qeydiyyat"
         android:label="fragment__vekil__qeydiyyat"
-        tools:layout="@layout/fragment__vekil__qeydiyyat" >
-        <action
-            android:id="@+id/action_fragment_Vekil_Qeydiyyat_to_fragment_Qeydiyyat3"
-            app:destination="@id/fragment_Qeydiyyat3" />
-        <action
-            android:id="@+id/action_fragment_Vekil_Qeydiyyat_to_vekil_Qeydiyyat_Ekrani"
-            app:destination="@id/vekil_Qeydiyyat_Ekrani" />
-    </fragment>
+        tools:layout="@layout/fragment__vekil__qeydiyyat" />
     <fragment
         android:id="@+id/fragment_Musteri_Qeydiyyat"
         android:name="com.example.testalovekil2.View.Fragment_Musteri_Qeydiyyat"
         android:label="fragment__musteri__qeydiyyat"
-        tools:layout="@layout/fragment__musteri__qeydiyyat" >
-        <action
-            android:id="@+id/action_fragment_Musteri_Qeydiyyat_to_fragment_Qeydiyyat3"
-            app:destination="@id/fragment_Qeydiyyat3" />
-    </fragment>
-    <fragment
-        android:id="@+id/fragment_Qeydiyyat3"
-        android:name="com.example.testalovekil2.View.Fragment_Qeydiyyat"
-        android:label="Fragment_Qeydiyyat" >
-        <action
-            android:id="@+id/action_fragment_Qeydiyyat3_to_fragment_Vekil_Qeydiyyat"
-            app:destination="@id/fragment_Vekil_Qeydiyyat" />
-        <action
-            android:id="@+id/action_fragment_Qeydiyyat3_to_fragment_Musteri_Qeydiyyat"
-            app:destination="@id/fragment_Musteri_Qeydiyyat" />
-    </fragment>
-    <fragment
-        android:id="@+id/vekil_Qeydiyyat_Ekrani"
-        android:name="com.example.testalovekil2.View.Vekil_Qeydiyyat_Ekrani"
-        android:label="fragment_vekil__qeydiyyat__ekrani"
-        tools:layout="@layout/fragment_vekil__qeydiyyat__ekrani" >
-        <action
-            android:id="@+id/action_vekil_Qeydiyyat_Ekrani_to_fragment_Vekil_Qeydiyyat"
-            app:destination="@id/fragment_Vekil_Qeydiyyat" />
-    </fragment>
+        tools:layout="@layout/fragment__musteri__qeydiyyat" />
 </navigation>

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/fragment_Vekil_Qeydiyyat"
-        android:name="View.Fragment_Vekil_Qeydiyyat"
+        android:name="com.example.testalovekil2.View.Fragment_Vekil_Qeydiyyat"
         android:label="fragment__vekil__qeydiyyat"
         tools:layout="@layout/fragment__vekil__qeydiyyat" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragment_Musteri_Qeydiyyat"
-        android:name="View.Fragment_Musteri_Qeydiyyat"
+        android:name="com.example.testalovekil2.View.Fragment_Musteri_Qeydiyyat"
         android:label="fragment__musteri__qeydiyyat"
         tools:layout="@layout/fragment__musteri__qeydiyyat" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragment_Qeydiyyat3"
-        android:name="View.Fragment_Qeydiyyat"
+        android:name="com.example.testalovekil2.View.Fragment_Qeydiyyat"
         android:label="Fragment_Qeydiyyat" >
         <action
             android:id="@+id/action_fragment_Qeydiyyat3_to_fragment_Vekil_Qeydiyyat"
@@ -39,7 +39,7 @@
     </fragment>
     <fragment
         android:id="@+id/vekil_Qeydiyyat_Ekrani"
-        android:name="View.Vekil_Qeydiyyat_Ekrani"
+        android:name="com.example.testalovekil2.View.Vekil_Qeydiyyat_Ekrani"
         android:label="fragment_vekil__qeydiyyat__ekrani"
         tools:layout="@layout/fragment_vekil__qeydiyyat__ekrani" >
         <action

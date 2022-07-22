@@ -1,4 +1,4 @@
-package View
+package com.example.testalovekil2.View
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.example.testalovekil2.R
 
 
-class Fragment_Musteri_Qeydiyyat : Fragment() {
+class Vekil_Qeydiyyat_Ekrani : Fragment() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +21,8 @@ class Fragment_Musteri_Qeydiyyat : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment__musteri__qeydiyyat, container, false)
+        return inflater.inflate(R.layout.fragment_vekil__qeydiyyat__ekrani, container, false)
     }
+
 
 }

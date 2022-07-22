@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
         tools:layout="@layout/fragment__qeydiyyat"
-    tools:context="View.Fragment_Qeydiyyat">
+    tools:context="com.example.testalovekil2.View.Fragment_Qeydiyyat">
 
         <Button
             android:id="@+id/lawyerregistr"
@@ -16,6 +16,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginStart="109dp"
             android:layout_marginTop="200dp"
+            android:background="@drawable/bg_button"
             android:gravity="center"
             android:scaleType="fitCenter"
             android:text="@string/VekilLogin"
@@ -27,7 +28,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/lawyerregistr"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/bg_button"
             android:gravity="center"
             android:padding="5dp"
             android:text="@string/MusteriLogin"

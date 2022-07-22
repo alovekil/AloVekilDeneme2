@@ -1,4 +1,4 @@
-package View
+package com.example.testalovekil2.View
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

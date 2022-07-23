@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import com.example.testalovekil2.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import kotlinx.android.synthetic.main.fragment_vekil_qeydiyyat_seyfe.*
 
 class VekilQeydiyyatSeyfeFragment : Fragment() {
     private lateinit var firebaseAuth: FirebaseAuth
@@ -15,14 +16,17 @@ class VekilQeydiyyatSeyfeFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         firebaseAuth= FirebaseAuth.getInstance()
-
+        checkuser()
+        btn_logout.setOnClickListener {
+            firebaseAuth.signOut()
+            checkuser()
+        }
     }
 
     private fun checkuser(){
         val firebaseUser=firebaseAuth.currentUser
-        if(firebaseUser==null){
-
-        }
+        val phone = firebaseUser?.phoneNumber
+        phoneTv.text = phone
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

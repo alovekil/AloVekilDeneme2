@@ -30,7 +30,15 @@ class Fragment_Qeydiyyat : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        
+        btn_lawRegister.setOnClickListener {
+            val action =  Fragment_QeydiyyatDirections.actionFragmentQeydiyyatToOTPFragment()
+            Navigation.findNavController(it).navigate(action)
+        }
+
+        btn_clientRegister.setOnClickListener {
+            val action = Fragment_QeydiyyatDirections.actionFragmentQeydiyyatToOTPFragment()
+            Navigation.findNavController(it).navigate(action)
+        }
     }
 
 }

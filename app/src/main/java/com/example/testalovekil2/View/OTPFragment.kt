@@ -1,5 +1,4 @@
 package com.example.testalovekil2.View
-
 import android.app.Activity
 import android.app.ProgressDialog
 import android.content.Intent
@@ -13,7 +12,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.example.testalovekil2.R
-import com.example.testalovekil2.databinding.ActivityMainBinding
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
@@ -21,29 +19,20 @@ import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
 import kotlinx.android.synthetic.main.fragment_o_t_p.*
 import java.util.concurrent.TimeUnit
-
-
 class OTPFragment : Fragment() {
-
-
-
     private  var forceResendingToken: PhoneAuthProvider.ForceResendingToken?=null
-
     private var mCallBack:PhoneAuthProvider.OnVerificationStateChangedCallbacks?=null
-
     private var mVerificationId:String?=null
-
     private lateinit var progressDialog:ProgressDialog
     private lateinit var firebaseAuth:FirebaseAuth
     private  fun Tag() = "MAIN_TAG"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         icontelephone.visibility=View.GONE
         otplayout.visibility=View.GONE
-
-
         firebaseAuth= FirebaseAuth.getInstance()
-
         progressDialog= ProgressDialog(activity)
         progressDialog.setTitle("text")
         progressDialog.setCanceledOnTouchOutside(false)
@@ -71,8 +60,6 @@ class OTPFragment : Fragment() {
                 captioncode.text="Please type the verification code we sent to ${phoneEt.text.toString().trim()}"
                 super.onCodeSent(p0, p1)
             }
-
-
         }
 
         continuebtn.setOnClickListener{
@@ -108,7 +95,7 @@ class OTPFragment : Fragment() {
 
             }
             else{
-                resendphoneOTPcode(phone,forceResendingToken)
+               verifyphonenumber(mVerificationId, code = "")
             }
             }
 

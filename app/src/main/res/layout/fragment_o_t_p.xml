@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true"
+    tools:context=".View.OTPFragment"
+    android:padding="18dp">
+
+
+    <ImageView
+        android:id="@+id/icontelephone"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_twotone_phone_android_24"/>
+    <!--Enter number place-->
+    <LinearLayout
+        android:id="@+id/telnumberlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"/>
+        <TextView
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:layout_width="match_parent"
+            android:text="Phone Number"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:textColor="#000"/>
+    <TextView
+        style="@style/TextAppearance.AppCompat.Caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please entery your phone number"
+        android:textAlignment="center"
+        android:textColor="#7777"/>
+
+    <EditText
+        android:id="@+id/phoneEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="+994xxxxxxxxx"
+        android:inputType="phone"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        android:textColor="#000" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/continuebtn"
+        android:text="Continue"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="5dp"/>
+
+
+
+<!--Otp code-->
+<LinearLayout
+android:id="@+id/otplayout"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:layout_marginTop="20dp"/>
+<TextView
+style="@style/TextAppearance.MaterialComponents.Subtitle1"
+android:layout_width="match_parent"
+android:text="Verification Code"
+android:layout_height="wrap_content"
+android:layout_marginTop="10dp"
+android:textAlignment="center"
+android:textColor="#000"/>
+<TextView
+style="@style/TextAppearance.AppCompat.Caption"
+android:layout_width="match_parent"
+    android:id="@+id/captioncode"
+android:layout_height="wrap_content"
+android:text="Please entery your verification code"
+android:textAlignment="center"
+android:textColor="#7777"/>
+
+<EditText
+android:id="@+id/verificationcode"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="10dp"
+android:hint="xxxx"
+android:inputType="number"
+android:minHeight="48dp"
+android:textAlignment="center"
+android:textColor="#000" />
+
+    <EditText
+        android:id="@+id/otpresentcode"
+        style="@style/TextAppearance.AppCompat.Caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:padding="5dp"
+        android:text="@string/did_not_get_otp_resend"
+        android:textAlignment="center"
+        android:textColor="#7777" />
+<Button
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:id="@+id/submit_btn"
+android:text="@string/submit"
+android:gravity="center_horizontal"
+android:layout_marginTop="5dp"/>
+
+</LinearLayout>
+

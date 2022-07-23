@@ -6,8 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import com.example.testalovekil2.R
 import kotlinx.android.synthetic.main.fragment__qeydiyyat.*
+import kotlinx.android.synthetic.main.fragment_register_login.*
 
 
 class Fragment_Qeydiyyat : Fragment() {

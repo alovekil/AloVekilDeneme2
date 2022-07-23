@@ -9,7 +9,7 @@
     tools:context=".View.RegisterLoginFragment">
 
     <Button
-        android:id="@+id/lawyerregistr"
+        android:id="@+id/btn_lawRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
@@ -19,7 +19,7 @@
         android:textSize="18sp" />
 
     <Button
-            android:id="@+id/customerregistr"
+            android:id="@+id/btn_clientRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"

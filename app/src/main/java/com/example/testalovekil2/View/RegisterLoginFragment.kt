@@ -30,7 +30,7 @@ class RegisterLoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         btn_register.setOnClickListener {
-            val action = RegisterLoginFragmentDirections.actionRegisterLoginFragmentToFragmentQeydiyyat()
+            val action =  RegisterLoginFragmentDirections.actionRegisterLoginFragmentToFragmentQeydiyyat()
             Navigation.findNavController(it).navigate(action)
         }
     }

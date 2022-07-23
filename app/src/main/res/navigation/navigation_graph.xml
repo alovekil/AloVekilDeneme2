@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/registerLoginFragment">
+
+    <fragment
+        android:id="@+id/registerLoginFragment"
+        android:name="com.example.testalovekil2.View.RegisterLoginFragment"
+        android:label="fragment_register_login"
+        tools:layout="@layout/fragment_register_login" >
+        <action
+            android:id="@+id/action_registerLoginFragment_to_fragment_Qeydiyyat"
+            app:destination="@id/fragment_Qeydiyyat" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_Qeydiyyat"
+        android:name="com.example.testalovekil2.View.Fragment_Qeydiyyat"
+        android:label="Fragment_Qeydiyyat" />
+</navigation>

@@ -3,13 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AloVekilDeneme2/app/src/main/res/drawable/ic_twotone_phone_android_24.xml" value="0.115" />
+        <entry key="..\:/AloVekilDeneme2/app/src/main/res/layout-land/activity_main.xml" value="0.1728395061728395" />
         <entry key="..\:/AloVekilDeneme2/app/src/main/res/layout/activity_main.xml" value="0.14" />
         <entry key="..\:/AloVekilDeneme2/app/src/main/res/layout/fragment__musteri__qeydiyyat.xml" value="0.18854166666666666" />
         <entry key="..\:/AloVekilDeneme2/app/src/main/res/layout/fragment__qeydiyyat.xml" value="0.20416666666666666" />
         <entry key="..\:/AloVekilDeneme2/app/src/main/res/layout/fragment__qeydiyyat__ekrani.xml" value="0.17074275362318841" />
         <entry key="..\:/AloVekilDeneme2/app/src/main/res/layout/fragment__vekil__qeydiyyat.xml" value="0.18854166666666666" />
         <entry key="..\:/AloVekilDeneme2/app/src/main/res/layout/fragment_musteri_qeydiyyat_ekrani.xml" value="0.17074275362318841" />
+        <entry key="..\:/AloVekilDeneme2/app/src/main/res/layout/fragment_o_t_p.xml" value="0.22" />
+        <entry key="..\:/AloVekilDeneme2/app/src/main/res/layout/fragment_register_login.xml" value="0.17074275362318841" />
         <entry key="..\:/AloVekilDeneme2/app/src/main/res/layout/fragment_vekil__qeydiyyat__ekrani.xml" value="0.18854166666666666" />
+        <entry key="..\:/AloVekilDeneme2/app/src/main/res/layout/fragment_vekil_qeydiyyat_seyfe.xml" value="0.140625" />
         <entry key="..\:/TestAloVekil2/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/TestAloVekil2/app/src/main/res/layout/fragment__musteri__qeydiyyat.xml" value="0.17074275362318841" />
         <entry key="..\:/TestAloVekil2/app/src/main/res/layout/fragment__qeydiyyat.xml" value="0.25" />

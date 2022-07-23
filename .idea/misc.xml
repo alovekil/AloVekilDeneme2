@@ -3,10 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/AloVekilDeneme2/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/AloVekilDeneme2/app/src/main/res/layout/activity_main.xml" value="0.14" />
         <entry key="..\:/AloVekilDeneme2/app/src/main/res/layout/fragment__musteri__qeydiyyat.xml" value="0.18854166666666666" />
         <entry key="..\:/AloVekilDeneme2/app/src/main/res/layout/fragment__qeydiyyat.xml" value="0.20416666666666666" />
+        <entry key="..\:/AloVekilDeneme2/app/src/main/res/layout/fragment__qeydiyyat__ekrani.xml" value="0.17074275362318841" />
         <entry key="..\:/AloVekilDeneme2/app/src/main/res/layout/fragment__vekil__qeydiyyat.xml" value="0.18854166666666666" />
+        <entry key="..\:/AloVekilDeneme2/app/src/main/res/layout/fragment_musteri_qeydiyyat_ekrani.xml" value="0.17074275362318841" />
         <entry key="..\:/AloVekilDeneme2/app/src/main/res/layout/fragment_vekil__qeydiyyat__ekrani.xml" value="0.18854166666666666" />
         <entry key="..\:/TestAloVekil2/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/TestAloVekil2/app/src/main/res/layout/fragment__musteri__qeydiyyat.xml" value="0.17074275362318841" />

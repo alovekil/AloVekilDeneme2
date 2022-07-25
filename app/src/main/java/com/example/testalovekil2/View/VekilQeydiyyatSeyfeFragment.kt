@@ -8,10 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.testalovekil2.R
 import com.google.firebase.auth.FirebaseAuth
-<<<<<<< HEAD
-=======
+
 import com.google.firebase.auth.FirebaseUser
->>>>>>> 2fb3e04d99273b2f2469f693a7d03b92604b704e
 import kotlinx.android.synthetic.main.fragment_vekil_qeydiyyat_seyfe.*
 
 class VekilQeydiyyatSeyfeFragment : Fragment() {
@@ -19,27 +17,26 @@ class VekilQeydiyyatSeyfeFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-<<<<<<< HEAD
 
-
-    }
-
-
-=======
-        firebaseAuth= FirebaseAuth.getInstance()
+        firebaseAuth = FirebaseAuth.getInstance()
         checkuser()
+
+
+
+
+
         btn_logout.setOnClickListener {
             firebaseAuth.signOut()
             checkuser()
         }
     }
 
-    private fun checkuser(){
-        val firebaseUser=firebaseAuth.currentUser
+    private fun checkuser() {
+        val firebaseUser = firebaseAuth.currentUser
         val phone = firebaseUser?.phoneNumber
         phoneTv.text = phone
     }
->>>>>>> 2fb3e04d99273b2f2469f693a7d03b92604b704e
+    >>>>>>> 2fb3e04d99273b2f2469f693a7d03b92604b704e
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -50,7 +47,7 @@ class VekilQeydiyyatSeyfeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        firebaseAuth= FirebaseAuth.getInstance()
+        firebaseAuth = FirebaseAuth.getInstance()
         checkuser()
         btn_logout.setOnClickListener {
             firebaseAuth.signOut()
@@ -58,16 +55,16 @@ class VekilQeydiyyatSeyfeFragment : Fragment() {
         }
     }
 
-    private fun checkuser(){
-        val firebaseUser=firebaseAuth.currentUser
-        if(firebaseUser==null){
-            startActivity(Intent(this.activity,OTPFragment::class.java))
+    private fun checkuser() {
+        val firebaseUser = firebaseAuth.currentUser
+        if (firebaseUser == null) {
+            startActivity(Intent(this.activity, OTPFragment::class.java))
 
-        }
-        else{
-            val phone=firebaseUser.phoneNumber
-            phonenumber.text=phone
+        } else {
+            val phone = firebaseUser.phoneNumber
+            phonenumber.text = phone
 
         }
     }
+
 }

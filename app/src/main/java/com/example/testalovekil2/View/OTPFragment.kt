@@ -19,6 +19,7 @@ import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
 import kotlinx.android.synthetic.main.fragment_o_t_p.*
+import kotlinx.android.synthetic.main.fragment_o_t_p.view.*
 import java.util.concurrent.TimeUnit
 class OTPFragment : Fragment() {
     private  var forceResendingToken: PhoneAuthProvider.ForceResendingToken?=null
@@ -42,20 +43,16 @@ class OTPFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_o_t_p, container, false)
-    }
+        val view =inflater.inflate(R.layout.fragment_o_t_p, container, false)
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        icontelephone.visibility=View.GONE
-        otplayout.visibility=View.GONE
+        view.icontelephone.visibility=View.GONE
+        view.telnumberlayout.visibility=View.VISIBLE
+        view.otplayout.visibility=View.VISIBLE
         firebaseAuth= FirebaseAuth.getInstance()
 
         progressDialog= ProgressDialog(activity)
         progressDialog.setTitle("text")
         progressDialog.setCanceledOnTouchOutside(false)
-
         mCallBack=object :PhoneAuthProvider.OnVerificationStateChangedCallbacks(){
             override fun onVerificationCompleted(p0: PhoneAuthCredential) {
                 Log.d(Tag(),"onverficationcompleted: ")
@@ -83,7 +80,7 @@ class OTPFragment : Fragment() {
 
         }
 
-        continuebtn.setOnClickListener{
+        view.continuebtn.setOnClickListener{
             //input phone number
             val phone=phoneEt.text.toString().trim()
             //validate phone number
@@ -96,7 +93,7 @@ class OTPFragment : Fragment() {
             }
         }
 
-        otpresentcode.setOnClickListener {
+        view.otpresentcode.setOnClickListener {
             val phone=phoneEt.text.toString().trim()
             //validate phone number
             if(TextUtils.isEmpty(phone)){
@@ -108,7 +105,7 @@ class OTPFragment : Fragment() {
             }
         }
 
-        submit_btn.setOnClickListener {
+        view.submit_btn.setOnClickListener {
             val phone=phoneEt.text.toString().trim()
             //validate phone number
             if(TextUtils.isEmpty(phone)){
@@ -116,16 +113,13 @@ class OTPFragment : Fragment() {
 
             }
             else{
-<<<<<<< HEAD
                 verifyphonenumber(mVerificationId, code = "")
-=======
-               verifyphonenumber(mVerificationId, code = "")
-            }
->>>>>>> 2fb3e04d99273b2f2469f693a7d03b92604b704e
             }
         }
 
+        return view
     }
+
     private fun startphoneverification(phone: String){
         progressDialog.setMessage("Verifiying Phone Number...")
         progressDialog.show()

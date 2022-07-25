@@ -1,4 +1,5 @@
 package com.example.testalovekil2.View
+
 import android.app.Activity
 import android.app.ProgressDialog
 import android.content.Intent
@@ -11,48 +12,42 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.app.ActivityCompat
 import com.example.testalovekil2.R
+import com.example.testalovekil2.databinding.ActivityMainBinding
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
 import kotlinx.android.synthetic.main.fragment_o_t_p.*
-import kotlinx.android.synthetic.main.fragment_o_t_p.view.*
 import java.util.concurrent.TimeUnit
+
+
 class OTPFragment : Fragment() {
+
+
+
     private  var forceResendingToken: PhoneAuthProvider.ForceResendingToken?=null
+
     private var mCallBack:PhoneAuthProvider.OnVerificationStateChangedCallbacks?=null
+
     private var mVerificationId:String?=null
+
     private lateinit var progressDialog:ProgressDialog
     private lateinit var firebaseAuth:FirebaseAuth
     private  fun Tag() = "MAIN_TAG"
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        icontelephone.visibility=View.GONE
+        otplayout.visibility=View.GONE
 
 
-
-    }
-
-
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        val view =inflater.inflate(R.layout.fragment_o_t_p, container, false)
-
-        view.icontelephone.visibility=View.GONE
-        view.telnumberlayout.visibility=View.VISIBLE
-        view.otplayout.visibility=View.VISIBLE
         firebaseAuth= FirebaseAuth.getInstance()
 
         progressDialog= ProgressDialog(activity)
         progressDialog.setTitle("text")
         progressDialog.setCanceledOnTouchOutside(false)
+
         mCallBack=object :PhoneAuthProvider.OnVerificationStateChangedCallbacks(){
             override fun onVerificationCompleted(p0: PhoneAuthCredential) {
                 Log.d(Tag(),"onverficationcompleted: ")
@@ -60,13 +55,13 @@ class OTPFragment : Fragment() {
             }
 
             override fun onVerificationFailed(p0: FirebaseException) {
-                progressDialog.dismiss()
+            progressDialog.dismiss()
                 Log.d(Tag(),"onVerficationfailed ${p0}")
                 Toast.makeText(activity,"${p0.message}",Toast.LENGTH_SHORT).show()
             }
 
             override fun onCodeSent(p0: String, p1: PhoneAuthProvider.ForceResendingToken) {
-                Log.d(Tag(),"onCodesent:${p0}")
+               Log.d(Tag(),"onCodesent:${p0}")
                 mVerificationId=p0
                 forceResendingToken=p1
                 progressDialog.dismiss()
@@ -80,9 +75,9 @@ class OTPFragment : Fragment() {
 
         }
 
-        view.continuebtn.setOnClickListener{
+        continuebtn.setOnClickListener{
             //input phone number
-            val phone=phoneEt.text.toString().trim()
+        val phone=phoneEt.text.toString().trim()
             //validate phone number
             if(TextUtils.isEmpty(phone)){
                 Toast.makeText(this.activity,"Please enter your phone number...",Toast.LENGTH_SHORT).show()
@@ -93,7 +88,7 @@ class OTPFragment : Fragment() {
             }
         }
 
-        view.otpresentcode.setOnClickListener {
+        otpresentcode.setOnClickListener {
             val phone=phoneEt.text.toString().trim()
             //validate phone number
             if(TextUtils.isEmpty(phone)){
@@ -105,7 +100,7 @@ class OTPFragment : Fragment() {
             }
         }
 
-        view.submit_btn.setOnClickListener {
+        submit_btn.setOnClickListener {
             val phone=phoneEt.text.toString().trim()
             //validate phone number
             if(TextUtils.isEmpty(phone)){
@@ -113,13 +108,11 @@ class OTPFragment : Fragment() {
 
             }
             else{
-                verifyphonenumber(mVerificationId, code = "")
+                resendphoneOTPcode(phone,forceResendingToken)
             }
-        }
+            }
 
-        return view
     }
-
     private fun startphoneverification(phone: String){
         progressDialog.setMessage("Verifiying Phone Number...")
         progressDialog.show()
@@ -148,9 +141,9 @@ class OTPFragment : Fragment() {
     }
 
     private fun verifyphonenumber(verification:String?,code:String){
-        progressDialog.setMessage("Verifying code...")
-        progressDialog.show()
-        val credential=PhoneAuthProvider.getCredential(verification!!,code)
+    progressDialog.setMessage("Verifying code...")
+    progressDialog.show()
+    val credential=PhoneAuthProvider.getCredential(verification!!,code)
         signinwithphoneauth(credential)
     }
 
@@ -166,5 +159,15 @@ class OTPFragment : Fragment() {
             Toast.makeText(this.activity,"${e.message}",Toast.LENGTH_SHORT).show()
         }
     }
+
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_o_t_p, container, false)
+    }
+
 
 }

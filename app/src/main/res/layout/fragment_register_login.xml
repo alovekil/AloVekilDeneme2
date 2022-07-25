@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/bg_button"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="50dp"
         android:text="@string/Login"
         tools:layout_editor_absoluteX="63dp"
         tools:layout_editor_absoluteY="170dp" />

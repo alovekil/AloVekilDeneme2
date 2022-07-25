@@ -1,5 +1,4 @@
 package com.example.testalovekil2.View
-
 import android.app.Activity
 import android.app.ProgressDialog
 import android.content.Intent
@@ -12,8 +11,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.app.ActivityCompat
 import com.example.testalovekil2.R
-import com.example.testalovekil2.databinding.ActivityMainBinding
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
@@ -21,27 +20,36 @@ import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
 import kotlinx.android.synthetic.main.fragment_o_t_p.*
 import java.util.concurrent.TimeUnit
-
-
 class OTPFragment : Fragment() {
-
-
-
     private  var forceResendingToken: PhoneAuthProvider.ForceResendingToken?=null
-
     private var mCallBack:PhoneAuthProvider.OnVerificationStateChangedCallbacks?=null
-
     private var mVerificationId:String?=null
-
     private lateinit var progressDialog:ProgressDialog
     private lateinit var firebaseAuth:FirebaseAuth
     private  fun Tag() = "MAIN_TAG"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
+
+    }
+
+
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_o_t_p, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         icontelephone.visibility=View.GONE
         otplayout.visibility=View.GONE
-
-
         firebaseAuth= FirebaseAuth.getInstance()
 
         progressDialog= ProgressDialog(activity)
@@ -55,13 +63,13 @@ class OTPFragment : Fragment() {
             }
 
             override fun onVerificationFailed(p0: FirebaseException) {
-            progressDialog.dismiss()
+                progressDialog.dismiss()
                 Log.d(Tag(),"onVerficationfailed ${p0}")
                 Toast.makeText(activity,"${p0.message}",Toast.LENGTH_SHORT).show()
             }
 
             override fun onCodeSent(p0: String, p1: PhoneAuthProvider.ForceResendingToken) {
-               Log.d(Tag(),"onCodesent:${p0}")
+                Log.d(Tag(),"onCodesent:${p0}")
                 mVerificationId=p0
                 forceResendingToken=p1
                 progressDialog.dismiss()
@@ -77,7 +85,7 @@ class OTPFragment : Fragment() {
 
         continuebtn.setOnClickListener{
             //input phone number
-        val phone=phoneEt.text.toString().trim()
+            val phone=phoneEt.text.toString().trim()
             //validate phone number
             if(TextUtils.isEmpty(phone)){
                 Toast.makeText(this.activity,"Please enter your phone number...",Toast.LENGTH_SHORT).show()
@@ -108,9 +116,14 @@ class OTPFragment : Fragment() {
 
             }
             else{
-                resendphoneOTPcode(phone,forceResendingToken)
+<<<<<<< HEAD
+                verifyphonenumber(mVerificationId, code = "")
+=======
+               verifyphonenumber(mVerificationId, code = "")
             }
+>>>>>>> 2fb3e04d99273b2f2469f693a7d03b92604b704e
             }
+        }
 
     }
     private fun startphoneverification(phone: String){
@@ -141,9 +154,9 @@ class OTPFragment : Fragment() {
     }
 
     private fun verifyphonenumber(verification:String?,code:String){
-    progressDialog.setMessage("Verifying code...")
-    progressDialog.show()
-    val credential=PhoneAuthProvider.getCredential(verification!!,code)
+        progressDialog.setMessage("Verifying code...")
+        progressDialog.show()
+        val credential=PhoneAuthProvider.getCredential(verification!!,code)
         signinwithphoneauth(credential)
     }
 
@@ -159,15 +172,5 @@ class OTPFragment : Fragment() {
             Toast.makeText(this.activity,"${e.message}",Toast.LENGTH_SHORT).show()
         }
     }
-
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_o_t_p, container, false)
-    }
-
 
 }

@@ -17,5 +17,14 @@
     <fragment
         android:id="@+id/fragment_Qeydiyyat"
         android:name="com.example.testalovekil2.View.Fragment_Qeydiyyat"
-        android:label="Fragment_Qeydiyyat" />
+        android:label="Fragment_Qeydiyyat" >
+        <action
+            android:id="@+id/action_fragment_Qeydiyyat_to_OTPFragment"
+            app:destination="@id/OTPFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/OTPFragment"
+        android:name="com.example.testalovekil2.View.OTPFragment"
+        android:label="fragment_o_t_p"
+        tools:layout="@layout/fragment_o_t_p" />
 </navigation>

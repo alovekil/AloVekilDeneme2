@@ -1,14 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+=======
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+>>>>>>> 2fb3e04d99273b2f2469f693a7d03b92604b704e
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:gravity="center"
     android:layout_height="match_parent"
+<<<<<<< HEAD
+    android:orientation="vertical"
     tools:context=".View.VekilQeydiyyatSeyfeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+=======
+    android:background="#f7f7f7"
+    android:orientation="vertical"
+    android:gravity="center">
 
-</FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You are logged in as"
+        android:textColor="#000"/>
+>>>>>>> 2fb3e04d99273b2f2469f693a7d03b92604b704e
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+<<<<<<< HEAD
+        android:layout_marginTop="10dp"
+        android:text="You're logged in as"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/phonenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="You're number"
+        android:textColor="#7777" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/btn_logout"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Log Out" />
+
+=======
+        android:id="@+id/phoneTv"
+        android:layout_marginTop="10dp"
+        android:text="Phone number"
+        android:textColor="@color/black"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_logout"
+        android:text="Logout"
+        android:layout_marginTop="20dp"/>
+>>>>>>> 2fb3e04d99273b2f2469f693a7d03b92604b704e
+</LinearLayout>

@@ -33,6 +33,7 @@ class OTPFragment : Fragment() {
         icontelephone.visibility=View.GONE
         otplayout.visibility=View.GONE
         firebaseAuth= FirebaseAuth.getInstance()
+
         progressDialog= ProgressDialog(activity)
         progressDialog.setTitle("text")
         progressDialog.setCanceledOnTouchOutside(false)
@@ -60,6 +61,8 @@ class OTPFragment : Fragment() {
                 captioncode.text="Please type the verification code we sent to ${phoneEt.text.toString().trim()}"
                 super.onCodeSent(p0, p1)
             }
+
+
         }
 
         continuebtn.setOnClickListener{

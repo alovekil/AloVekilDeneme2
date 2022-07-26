@@ -12,6 +12,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.Navigation
 import com.example.testalovekil2.R
 import com.example.testalovekil2.databinding.ActivityMainBinding
 import com.google.firebase.FirebaseException
@@ -164,11 +165,13 @@ class OTPFragment : Fragment() {
             }
             else{
                 verifyphonenumber(mVerificationId, code = "")
+                val action = Fragment_QeydiyyatDirections.actionFragmentQeydiyyatToOTPFragment()
+                Navigation.findNavController(it).navigate(action)
             }
         }
         return view
 
-        return view
+
     }
 
 

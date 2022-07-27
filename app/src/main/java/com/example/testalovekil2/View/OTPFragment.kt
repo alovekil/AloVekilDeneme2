@@ -72,7 +72,7 @@ class OTPFragment : Fragment() {
     private fun verifyphonenumber(verification:String?,code:String){
     progressDialog.setMessage("Verifying code...")
     progressDialog.show()
-    val credential=PhoneAuthProvider.getCredential(verification!!,code)
+    val credential = PhoneAuthProvider.getCredential(verification!!,code)
         signinwithphoneauth(credential)
     }
 
@@ -165,7 +165,7 @@ class OTPFragment : Fragment() {
             }
             else{
                 verifyphonenumber(mVerificationId, code = "")
-                val action = Fragment_QeydiyyatDirections.actionFragmentQeydiyyatToOTPFragment()
+                val action = OTPFragmentDirections.actionOTPFragmentToVekilQeydiyyatSeyfeFragment()
                 Navigation.findNavController(it).navigate(action)
             }
         }
